@@ -176,7 +176,7 @@ Shader "Diep/Smock"
 						i.color.a *= fade;
 					#endif
 
-					Gradient gradient5 = NewGradient( 0, 3, 2, float4( 0.9528302, 0.3396338, 0.2382075, 0 ), float4( 0.9056604, 0.4609442, 0.09825563, 0.5499962 ), float4( 0.9528302, 0.8908063, 0.4359648, 1 ), 0, 0, 0, 0, 0, float2( 1, 0 ), float2( 1, 1 ), 0, 0, 0, 0, 0, 0 );
+					Gradient gradient5 = NewGradient( 0, 4, 2, float4( 0.4622642, 0.0753827, 0.01090246, 0 ), float4( 0.9528302, 0.3396338, 0.2382075, 0.2294194 ), float4( 0.9056604, 0.4609442, 0.09825563, 0.6264744 ), float4( 1, 0.9347317, 0.4009434, 1 ), 0, 0, 0, 0, float2( 1, 0 ), float2( 1, 0.997055 ), 0, 0, 0, 0, 0, 0 );
 					float2 uv_TextureSample0 = i.texcoord.xy * _TextureSample0_ST.xy + _TextureSample0_ST.zw;
 					float4 tex2DNode3 = tex2D( _TextureSample0, uv_TextureSample0 );
 					float4 appendResult6 = (float4(SampleGradient( gradient5, tex2DNode3.r ).r , SampleGradient( gradient5, tex2DNode3.r ).g , SampleGradient( gradient5, tex2DNode3.r ).b , tex2DNode3.a));
@@ -196,17 +196,17 @@ Shader "Diep/Smock"
 }
 /*ASEBEGIN
 Version=19100
-Node;AmplifyShaderEditor.DynamicAppendNode;6;524.949,-60.00299;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
-Node;AmplifyShaderEditor.GradientSampleNode;4;150,78;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
-Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;745,-20;Float;False;True;-1;2;ASEMaterialInspector;0;11;Diep/Smock;0b6a9f8b4f707c74ca64c0be8e590de0;True;SubShader 0 Pass 0;0;0;SubShader 0 Pass 0;2;True;True;2;5;False;;10;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;;False;True;True;True;True;False;0;False;;False;False;False;False;False;False;False;False;False;True;2;False;;True;3;False;;False;True;4;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;False;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;0;;0;0;Standard;0;0;1;True;False;;False;0
-Node;AmplifyShaderEditor.GradientNode;5;-115,147;Inherit;False;0;3;2;0.9528302,0.3396338,0.2382075,0;0.9056604,0.4609442,0.09825563,0.5499962;0.9528302,0.8908063,0.4359648,1;1,0;1,1;0;1;OBJECT;0
+Node;AmplifyShaderEditor.GradientNode;5;-115,147;Inherit;False;0;4;2;0.4622642,0.0753827,0.01090246,0;0.9528302,0.3396338,0.2382075,0.2294194;0.9056604,0.4609442,0.09825563,0.6264744;1,0.9347317,0.4009434,1;1,0;1,0.997055;0;1;OBJECT;0
 Node;AmplifyShaderEditor.SamplerNode;3;-258,-120;Inherit;True;Property;_TextureSample0;Texture Sample 0;0;0;Create;True;0;0;0;False;0;False;-1;7cc3f68dbea5c6d4a92a18ea5e5788c2;7cc3f68dbea5c6d4a92a18ea5e5788c2;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;8;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;6;FLOAT;0;False;7;SAMPLERSTATE;;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.DynamicAppendNode;6;524.949,-60.00299;Inherit;False;FLOAT4;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT4;0
+Node;AmplifyShaderEditor.TemplateMultiPassMasterNode;1;745,-20;Float;False;True;-1;2;ASEMaterialInspector;0;11;Diep/Smock;0b6a9f8b4f707c74ca64c0be8e590de0;True;SubShader 0 Pass 0;0;0;SubShader 0 Pass 0;2;True;True;2;5;False;;10;False;;0;1;False;;0;False;;False;False;False;False;False;False;False;False;False;False;False;False;True;2;False;;False;True;True;True;True;False;0;False;;False;False;False;False;False;False;False;False;False;True;2;False;;True;3;False;;False;True;4;Queue=Transparent=Queue=0;IgnoreProjector=True;RenderType=Transparent=RenderType;PreviewType=Plane;False;False;0;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;True;0;False;0;;0;0;Standard;0;0;1;True;False;;False;0
+Node;AmplifyShaderEditor.GradientSampleNode;4;150,78;Inherit;True;2;0;OBJECT;;False;1;FLOAT;0;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 WireConnection;6;0;4;1
 WireConnection;6;1;4;2
 WireConnection;6;2;4;3
 WireConnection;6;3;3;4
+WireConnection;1;0;6;0
 WireConnection;4;0;5;0
 WireConnection;4;1;3;0
-WireConnection;1;0;6;0
 ASEEND*/
-//CHKSM=1181685F80DC046CD3079A6EB7E444AD8AA91CC6
+//CHKSM=9C8F7973019F6E9B8DAF030E0A53E3C5BC5D3C98
